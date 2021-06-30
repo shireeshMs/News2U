@@ -99,6 +99,10 @@
 		7CC1EA6E268C670C00277909 /* news2U */ = {
 			isa = PBXGroup;
 			children = (
+				7CC1EAA2268C6BF700277909 /* ViewModel */,
+				7CC1EAA1268C6BEE00277909 /* Networking */,
+				7CC1EAA0268C6BAE00277909 /* Model */,
+				7CC1EA9F268C6B8C00277909 /* Coordinators */,
 				7CC1EA6F268C670C00277909 /* AppDelegate.swift */,
 				7CC1EA71268C670C00277909 /* SceneDelegate.swift */,
 				7CC1EA73268C670C00277909 /* ViewController.swift */,
@@ -126,6 +130,34 @@
 				7CC1EA93268C672300277909 /* Info.plist */,
 			);
 			path = news2UUITests;
+			sourceTree = "<group>";
+		};
+		7CC1EA9F268C6B8C00277909 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		7CC1EAA0268C6BAE00277909 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7CC1EAA1268C6BEE00277909 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7CC1EAA2268C6BF700277909 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
