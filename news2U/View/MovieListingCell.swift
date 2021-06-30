@@ -31,7 +31,7 @@ class MovieListingCell: UITableViewCell {
         // Bind labels
         titleLabel.text = tvShowViewModel?.title
         overviewLabel.text = tvShowViewModel?.name
-        voteLabel.text = tvShowViewModel?.voteDescription
+//        voteLabel.text = tvShowViewModel?.voteDescription
         // Bind Image
         let posterPath = tvShowViewModel?.imageUrl
        
