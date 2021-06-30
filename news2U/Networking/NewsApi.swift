@@ -1,0 +1,109 @@
+//
+//  NewsApi.swift
+//  news2U
+//
+//  Created by PiancaSiri on 30/06/21.
+//
+
+import Foundation
+
+struct NewsApi {
+    
+    static let ApiKey = "c965383ea2634bcbbcf91389753f343e"
+    
+    static func urlForCategory() -> URL? {
+        var urlComponents = NewsApi.baseUrlComponents
+        
+        urlComponents.path = Path.top.rawValue
+        
+        let keyQueryItem = NewsApi.keyQueryItem
+        let countryQueryItem = URLQueryItem(name: "country", value: "us")
+        
+        urlComponents.queryItems = [ keyQueryItem, countryQueryItem ]
+        
+        return urlComponents.url
+    }
+    
+    static func urlForQuery(_ query: String) -> URL? {
+        var urlComponents = NewsApi.baseUrlComponents
+        
+        urlComponents.path = Path.search.rawValue
+        
+        let keyQueryItem = NewsApi.keyQueryItem
+        let languageQueryItem = URLQueryItem(name: "language", value: "en")
+        let queryQueryItem = URLQueryItem(name: "q", value: query)
+        
+        urlComponents.queryItems = [ keyQueryItem, languageQueryItem, queryQueryItem ]
+        
+        return urlComponents.url
+    }
+    
+}
+
+private extension NewsApi {
+    enum Path: String {
+        case top = "/v2/top-headlines"
+        case search = "/v2/everything"
+    }
+    
+    static var baseUrlComponents: URLComponents {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "newsapi.org"
+        
+        return urlComponents
+    }
+    
+    static var keyQueryItem: URLQueryItem {
+        return URLQueryItem(name: "apiKey", value: ApiKey)
+    }
+}
+
+extension URL {
+    
+    func get<T: Codable>(completion: @escaping (Result<T, ApiError>) -> Void) {
+        print("get: \(self.absoluteString)")
+        
+        let session = URLSession.shared
+        let task = session.dataTask(with: self) { data, _, error in
+            if let _ = error {
+                DispatchQueue.main.async {
+                    completion(.error(error: .generic))
+                }
+                return
+            }
+            
+            guard let unwrappedData = data else {
+                DispatchQueue.main.async {
+                    completion(.error(error: .generic))
+                }
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            if let decoded = try? decoder.decode(T.self, from: unwrappedData) {
+                DispatchQueue.main.async {
+                    completion(.success(value: decoded))
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    completion(.error(error: .generic))
+                }
+            }
+        }
+        
+        task.resume()
+    }
+    
+}
+
+//public enum ApiError: Error {
+//    case generic
+//    case forbidden              //Status code 403
+//    case notFound               //Status code 404
+//    case conflict               //Status code 409
+//    case internalServerError    //Status code 500
+//    case unknownError           //Status code not known
+//}

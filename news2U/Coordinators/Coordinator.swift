@@ -4,7 +4,12 @@
 //
 //  Created by PiancaSiri on 30/06/21.
 //
+import Foundation
+import UIKit
 
-protocol Coordinator {
-  func start()
+public protocol Coordinator : AnyObject {
+    func start()
+    var childCoordinators: [Coordinator] { get set }
+    var navigationController: UINavigationController { get set }
+    
 }

@@ -1,5 +1,6 @@
 //
 //  ApiRouter.swift
+//  Networking
 //  news2U
 //
 //  Created by PiancaSiri on 30/06/21.
@@ -20,7 +21,7 @@ public struct ApiRouter: URLRequestConvertible {
     public func asURLRequest() throws -> URLRequest {
         let url = try Constants.baseUrl.asURL()
         
-        var urlRequest = URLRequest(url: url.appendingPathComponent(requestConfigurator.path!))
+        var urlRequest = URLRequest(url: url)
         
         //Http method
         urlRequest.httpMethod = method.rawValue

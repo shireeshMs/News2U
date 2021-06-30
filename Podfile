@@ -8,6 +8,7 @@ target 'news2U' do
   # Pods for news2U
 #  def alamofire
     pod 'Alamofire'
+    pod 'Kingfisher'
 #  end
   target 'news2UTests' do
     inherit! :search_paths

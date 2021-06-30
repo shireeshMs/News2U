@@ -1,5 +1,6 @@
 //
 //  Constants.swift
+//  Networking
 //  news2U
 //
 //  Created by PiancaSiri on 30/06/21.
@@ -10,7 +11,7 @@ import Foundation
 public struct Constants {
     
     /// The API's base URL
-    public static let baseUrl = "https://newsapi.org/v2/top-headlines"
+    public static let baseUrl = "https://newsapi.org/v2/everything"
     
     /// Paste your API Key over here
     public static let tmdbApiKey = "c965383ea2634bcbbcf91389753f343e"

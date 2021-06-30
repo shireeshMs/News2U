@@ -1,8 +1,5 @@
 
-{"articles": [
-    {
-        
-        "source": {
+[{"source": {
             "id": "reuters",
             "name": "Reuters"
         },
@@ -262,5 +259,3 @@
         "content": "Noticias relacionadas\r\nEste nuevo widget de Chrome ya ha estado disponible en iOS, así que en Android vamos a poder disfrutar de uno nuevo que permite el acceso a varias acciones importantes del nave… [+1589 chars]"
     }
 ]
-    
-}
