@@ -6,7 +6,9 @@ target 'news2U' do
   use_frameworks!
 
   # Pods for news2U
-
+#  def alamofire
+    pod 'Alamofire'
+#  end
   target 'news2UTests' do
     inherit! :search_paths
     # Pods for testing
