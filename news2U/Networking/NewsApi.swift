@@ -9,7 +9,12 @@ import Foundation
 
 struct NewsApi {
     
-    static let ApiKey = "bbd49fe67f2647569ee2186aff82a08a"
+    static let ApiKey = "9dadcef2d166412d9b22f719cc549e41"
+    
+    // another for backup (Not left more)
+//    static let ApiKey = "bbd49fe67f2647569ee2186aff82a08a"
+
+    
     static let Page = 1
 
     static func urlForCategory() -> URL? {

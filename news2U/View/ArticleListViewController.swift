@@ -36,18 +36,8 @@ final class ArticleListViewController: UIViewController,ViewModelController {
 // MARK: - Lifecycle
 extension ArticleListViewController {
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        viewModel.fetchTVShows()
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-//        tvShowViewModel = ArticleListViewModel(tvShowInteractor: self)
-//        tvShowViewModel = ArticleListViewModel(tvShowInteractor: self, coordinator: self.coordinator!)
-        print("Result \(self.viewModel.tvShowCellViewModels.count)")
-        print("Result\(self.viewModel.tvShowContainer?.articles)")
-//        self.viewModel = ArticleListViewModel(tvShowInteractor: <#T##TVShowInteractor#>, coordinator: <#T##AllArticlesListCoordinator#>)
         initTableView()
     }
     

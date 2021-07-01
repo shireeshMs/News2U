@@ -126,8 +126,8 @@
             filePath = "news2U/Coordinators/ConcreteCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "showWelcomePage()"
             landmarkType = "7">
             <Locations>
@@ -215,54 +215,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "15C477B2-4BB1-471D-91F9-4871DECA4F6E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "news2U/Coordinators/ConcreteCoordinator.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "showWelcomePage()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "15C477B2-4BB1-471D-91F9-4871DECA4F6E - 9559eeda52fe5f1d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "news2U.ConcreteCoordinator.showWelcomePage() -&gt; ()"
-                  moduleName = "news2U"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/piancasiri/Desktop/news2U/news2U/Coordinators/ConcreteCoordinator.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "235">
-               </Location>
-               <Location
-                  uuid = "15C477B2-4BB1-471D-91F9-4871DECA4F6E - c76ec1378cd781ad"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "news2UTests.ConcreteCoordinator.showWelcomePage() -&gt; ()"
-                  moduleName = "news2UTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/piancasiri/Desktop/news2U/news2U/Coordinators/ConcreteCoordinator.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "235">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "4EF916DE-5955-4DD3-89A4-14BB7129C4B9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -318,8 +270,8 @@
             filePath = "news2U/Coordinators/AllArticlesListCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "generateDetailCouple(_:)"
             landmarkType = "7">
             <Locations>
@@ -366,8 +318,8 @@
             filePath = "news2U/Coordinators/AllArticlesListCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "showDetailPage(for:)"
             landmarkType = "7">
             <Locations>

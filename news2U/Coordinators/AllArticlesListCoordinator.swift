@@ -23,8 +23,13 @@ final class AllArticlesListCoordinator: NavCoordinator ,TVShowInteractor{
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
         childCoordinators = []
-
-        navigationController.tabBarItem = UITabBarItem(title: "Home", image: nil, selectedImage: nil)
+        //        if #available(iOS 11.0, *) {
+        //            tabBar.barTintColor = .black
+        //            tabBar.tintColor = UIColor(named: "color_theme")
+        //        }
+        //        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Futura", size: 11) as Any], for: .normal)
+        //        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Futura", size: 11) as Any], for: .selected)
+        UITabBarItem(title: "Popular", image: UIImage(named: "ic_popular_disabled"), selectedImage: UIImage(named: "ic_popular"))
     }
     func showHome() {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -35,7 +40,7 @@ final class AllArticlesListCoordinator: NavCoordinator ,TVShowInteractor{
         viewController.title = "Article list"
         viewController.tabBarItem = UITabBarItem(title: "Popular", image: UIImage(named: "ic_popular_disabled"), selectedImage: UIImage(named: "ic_popular"))
         navigationController.pushViewController(viewController, animated: true)
-//        navigationController.configureTheme()
+        navigationController.configureTheme()
     }
      func start() {
         
@@ -59,6 +64,7 @@ final class AllArticlesListCoordinator: NavCoordinator ,TVShowInteractor{
         let couple: Couple<ArticleDetailViewModel, ArticleDetailController> = generateDetailCouple(article)
     
         navigationController.pushViewController(couple.controller, animated: true)
+        navigationController.configureTheme()
     }
 
 }

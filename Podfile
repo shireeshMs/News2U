@@ -6,9 +6,9 @@ target 'news2U' do
   use_frameworks!
 
   # Pods for news2U
-#  def Kingfisher
+
     pod 'Kingfisher'
-#  end
+
   target 'news2UTests' do
     inherit! :search_paths
     # Pods for testing
