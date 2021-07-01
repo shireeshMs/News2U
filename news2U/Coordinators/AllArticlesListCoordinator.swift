@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class AllArticlesListCoordinator: NavCoordinator, PreviewingCoordinator ,TVShowInteractor{
+final class AllArticlesListCoordinator: NavCoordinator ,TVShowInteractor{
    
     func shouldUpdateTableView() {
         let viewController: ArticleListViewController = self.navigationController.topViewController as! ArticleListViewController
@@ -41,22 +41,23 @@ final class AllArticlesListCoordinator: NavCoordinator, PreviewingCoordinator ,T
         
         showHome()
     }
-    func generateDetailCouple() -> Couple<ArticleDetailViewModel, ArticleDetailController> {
+    func generateDetailCouple(_ article : ArticleCellViewModel) -> Couple<ArticleDetailViewModel, ArticleDetailController> {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
         let viewModel: ArticleDetailViewModel = ArticleDetailViewModel(coordinator: self)
+        viewModel.tvShowContainer = article
         let viewController: ArticleDetailController = ArticleDetailController.initialize(with: viewModel, from: storyboard)
 
         return (viewModel: viewModel, controller: viewController)
     }
 
-    func previewDetailPage() -> ArticleDetailController {
-        return generateDetailCouple().controller
+    func previewDetailPage(for article : ArticleCellViewModel) -> ArticleDetailController {
+        return generateDetailCouple(article).controller
     }
 
-    func showDetailPage() {
-        let couple: Couple<ArticleDetailViewModel, ArticleDetailController> = generateDetailCouple()
-
+    func showDetailPage(for article : ArticleCellViewModel) {
+        let couple: Couple<ArticleDetailViewModel, ArticleDetailController> = generateDetailCouple(article)
+    
         navigationController.pushViewController(couple.controller, animated: true)
     }
 

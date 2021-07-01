@@ -12,7 +12,9 @@ extension ArticleListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // TODO
-        
+       let viewModelCell = self.viewModel.tvShowCellViewModels[indexPath.row]
+
+        self.viewModel.showDetail(for: self.viewModel.tvShowCellViewModels[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

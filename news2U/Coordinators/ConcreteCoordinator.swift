@@ -39,10 +39,10 @@ import UIKit
         addChildCoordinator(coordinator: coordinator)
 
         coordinator.start()
-
-        navigationController.present(coordinator.tabBarController, animated: animated, completion: {
-            self.stop()
-        })
+        navigationController.pushViewController(coordinator.tabBarController, animated: animated)
+//        navigationController.present(coordinator.tabBarController, animated: animated, completion: {
+//            self.stop()
+//        })
     }
 }
 

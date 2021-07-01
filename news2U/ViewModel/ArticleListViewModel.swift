@@ -19,17 +19,16 @@ class ArticleListViewModel : ViewModel {
     private let coordinator: AllArticlesListCoordinator
 
    
-    func showDetail() {
+    func showDetail(for article : ArticleCellViewModel) {
+        coordinator.showDetailPage(for: article)
 //        coordinator.showDetailPage()
     }
 
-    func previewDetail() -> UIViewController? {
-        return coordinator.generateDetailCouple().controller
+    func previewDetail(for article : ArticleCellViewModel) -> UIViewController? {
+        return coordinator.generateDetailCouple(article).controller
     }
 
-    func commitPreviewContext(viewController: UIViewController) {
-        coordinator.commitViewController(viewController)
-    }
+    
     var tvShowCellViewModels: [ArticleCellViewModel] = []
     
     private let tvShowInteractor: TVShowInteractor
@@ -52,7 +51,7 @@ class ArticleListViewModel : ViewModel {
     func updateCellViewModels() {
         let tvShows = tvShowContainer?.articles ?? []
         for tvShow in tvShows {
-            tvShowCellViewModels.append(ArticleCellViewModel(tvShow: tvShow))
+            tvShowCellViewModels.append(ArticleCellViewModel(article: tvShow))
         }
     }
     

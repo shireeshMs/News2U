@@ -34,8 +34,17 @@ class MovieListingCell: UITableViewCell {
 //        voteLabel.text = tvShowViewModel?.voteDescription
         // Bind Image
         let posterPath = tvShowViewModel?.imageUrl
-       
-        posterImageView.kf.setImage(with: URL(string: posterPath ?? ""))
+        let processor = DownsamplingImageProcessor(size: posterImageView.bounds.size)
+                     |> RoundCornerImageProcessor(cornerRadius: 20)
+        posterImageView.kf.setImage(
+            with: URL(string: posterPath ?? ""),
+            placeholder: UIImage(named: "ic_popular"),
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
         posterImageView.kf.indicatorType = .activity
     }
 
