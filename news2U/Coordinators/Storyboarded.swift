@@ -8,14 +8,23 @@
 import Foundation
 import UIKit
 
-public protocol Storyboarded { }
+
+protocol Storyboarded: AnyObject {
+    static func initialize(from storyboard: UIStoryboard) -> Self
+}
 
 extension Storyboarded where Self: UIViewController {
-    
-    public static func instantiate() -> Self {
-        let id = String(describing: self)
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        return storyboard.instantiateViewController(withIdentifier: id) as! Self
+    static func initialize(from storyboard: UIStoryboard) -> Self {
+        let nameSpaceClassName: String = NSStringFromClass(self)
+
+        guard let className: String = nameSpaceClassName.components(separatedBy: ".").last else {
+            fatalError("Cannot find class name from: " + nameSpaceClassName)
+        }
+
+        guard let viewController: Self = storyboard.instantiateViewController(withIdentifier: className) as? Self else {
+            fatalError("Cannot find UIViewController with identifier: " + className)
+        }
+
+        return viewController
     }
-    
 }

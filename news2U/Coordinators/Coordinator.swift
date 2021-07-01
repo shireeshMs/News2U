@@ -7,9 +7,32 @@
 import Foundation
 import UIKit
 
-public protocol Coordinator : AnyObject {
-    func start()
+protocol Coordinator: AnyObject {
+    var parentCoordinator: Coordinator? { get set }
     var childCoordinators: [Coordinator] { get set }
-    var navigationController: UINavigationController { get set }
-    
+
+    func start()
+    func stop()
+}
+
+extension Coordinator {
+    func addChildCoordinator(coordinator: Coordinator) {
+        childCoordinators.append(coordinator)
+    }
+
+    func removeChildCoordinator(coordinator: Coordinator) {
+        coordinator.stop()
+
+        childCoordinators = childCoordinators.filter({ childCoordinator -> Bool in
+            childCoordinator !== coordinator
+        })
+    }
+
+    func removeAllChildCoordinators() {
+        childCoordinators.forEach({ coordinator in
+            coordinator.stop()
+        })
+
+        childCoordinators.removeAll()
+    }
 }

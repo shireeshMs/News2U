@@ -67,6 +67,7 @@
 		7C557A2D268DE7E100342902 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C557A2A268DE7E000342902 /* CoordinatorTests.swift */; };
 		7C557A2E268DEB3500342902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CC1EA75268C670C00277909 /* Main.storyboard */; };
 		7C557A2F268DEB3600342902 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CC1EA75268C670C00277909 /* Main.storyboard */; };
+		7C557A32268E140F00342902 /* ezgif.com-gif-maker.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7C557A31268E140E00342902 /* ezgif.com-gif-maker.gif */; };
 		7C702DDE268C848F00707A37 /* Response.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 7C702DDD268C848F00707A37 /* Response.JSON */; };
 		7C702DE0268C86C400707A37 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C702DDF268C86C400707A37 /* Articles.swift */; };
 		7C702DE1268C86C400707A37 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C702DDF268C86C400707A37 /* Articles.swift */; };
@@ -146,6 +147,7 @@
 		7C557A26268DE7E000342902 /* XCTestCase+WaitUIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+WaitUIKit.swift"; sourceTree = "<group>"; };
 		7C557A27268DE7E000342902 /* XCTestCase+ReplaceCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+ReplaceCoordinator.swift"; sourceTree = "<group>"; };
 		7C557A2A268DE7E000342902 /* CoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		7C557A31268E140E00342902 /* ezgif.com-gif-maker.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ezgif.com-gif-maker.gif"; sourceTree = "<group>"; };
 		7C702DDD268C848F00707A37 /* Response.JSON */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Response.JSON; sourceTree = "<group>"; };
 		7C702DDF268C86C400707A37 /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		7C702DE3268C87C700707A37 /* ArticlesDisplayStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesDisplayStorage.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				7C9014C6268CDE6700EAB44B /* ArticleListViewController+UITableViewDataSourcePrefetching.swift */,
 				7C9014C5268CDE6700EAB44B /* ArticleListViewController+UITableViewDelegate.swift */,
 				7C702DDD268C848F00707A37 /* Response.JSON */,
+				7C557A31268E140E00342902 /* ezgif.com-gif-maker.gif */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C702DDE268C848F00707A37 /* Response.JSON in Resources */,
+				7C557A32268E140F00342902 /* ezgif.com-gif-maker.gif in Resources */,
 				7CC1EA7C268C672200277909 /* LaunchScreen.storyboard in Resources */,
 				7CC1EA79268C672100277909 /* Assets.xcassets in Resources */,
 				7CC1EA77268C670C00277909 /* Main.storyboard in Resources */,
