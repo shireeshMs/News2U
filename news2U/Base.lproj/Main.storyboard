@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y53-g3-1y5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Popular-->
+        <!--Article List-->
         <scene sceneID="os4-vc-jAv">
             <objects>
-                <viewController storyboardIdentifier="ArticleListViewController" id="fAb-hj-YDG" customClass="ArticleListViewController" customModule="news2U" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticleListViewController" title="Article List" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fAb-hj-YDG" customClass="ArticleListViewController" customModule="news2U" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GWo-F6-9Zj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mzB-Ry-3Qq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -30,7 +31,6 @@
                             <constraint firstItem="mzB-Ry-3Qq" firstAttribute="trailing" secondItem="SHH-bG-OSa" secondAttribute="trailing" id="sSu-7X-N1l"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Popular" image="ic_popular" id="QFz-3m-Urs"/>
                     <connections>
                         <outlet property="tableView" destination="mzB-Ry-3Qq" id="qUw-dE-oUW"/>
                     </connections>
@@ -39,25 +39,68 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="87.723214285714278"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="mwY-ou-w0a">
+        <!--Welcome Page Controller-->
+        <scene sceneID="Bci-3j-l7t">
             <objects>
-                <tabBarController storyboardIdentifier="RootViewController" automaticallyAdjustsScrollViewInsets="NO" id="y53-g3-1y5" customClass="RootViewController" customModule="news2U" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r32-hr-qIZ">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="fAb-hj-YDG" kind="relationship" relationship="viewControllers" id="ASR-zG-SmZ"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V6i-63-Ykj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="WelcomePageController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wv5-cr-U4B" customClass="WelcomePageController" customModule="news2U" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GhL-hR-z3Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lre-dL-vZz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aDP-et-iRZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6E-Dh-XSe">
+                                <rect key="frame" x="40" y="746" width="334" height="50"/>
+                                <color key="backgroundColor" white="0.67000000000000004" alpha="0.35223137840000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6bw-vq-Nx5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Begin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startApplicationAction:" destination="wv5-cr-U4B" eventType="touchUpInside" id="jd0-Vg-45i"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bR-nH-ElX">
+                                <rect key="frame" x="40" y="100" width="334" height="51.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="43"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MainCoordinator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyw-6q-mhN">
+                                <rect key="frame" x="143.5" y="859" width="127" height="17"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ViH-Z5-FeK"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nyw-6q-mhN" secondAttribute="bottom" constant="20" id="BYM-CA-9ni"/>
+                            <constraint firstItem="nyw-6q-mhN" firstAttribute="centerX" secondItem="aDP-et-iRZ" secondAttribute="centerX" id="CKu-Yv-lnd"/>
+                            <constraint firstItem="2bR-nH-ElX" firstAttribute="leading" secondItem="aDP-et-iRZ" secondAttribute="leading" constant="40" id="Fe9-pd-Dtn"/>
+                            <constraint firstItem="t6E-Dh-XSe" firstAttribute="leading" secondItem="2bR-nH-ElX" secondAttribute="leading" id="MLp-4L-RY5"/>
+                            <constraint firstItem="2bR-nH-ElX" firstAttribute="centerX" secondItem="aDP-et-iRZ" secondAttribute="centerX" id="NFi-o4-OuI"/>
+                            <constraint firstItem="t6E-Dh-XSe" firstAttribute="centerX" secondItem="aDP-et-iRZ" secondAttribute="centerX" id="bIz-uk-uDV"/>
+                            <constraint firstItem="2bR-nH-ElX" firstAttribute="top" secondItem="aDP-et-iRZ" secondAttribute="top" constant="100" id="i9F-47-u3h"/>
+                            <constraint firstAttribute="bottom" secondItem="t6E-Dh-XSe" secondAttribute="bottom" constant="100" id="rsp-Uc-mFK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gF5-2f-pSe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
+            <point key="canvasLocation" x="161" y="27"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="ic_popular" width="31" height="22"/>
-    </resources>
 </document>

@@ -13,7 +13,7 @@ extension NewsApi {
             switch result {
             case .success(let headline):
                 completion(headline)
-            case .error(error: _):
+            case .failure(_):
                 completion(nil)
             }
         })

@@ -9,7 +9,7 @@ import Foundation
 
 struct NewsApi {
     
-    static let ApiKey = "c965383ea2634bcbbcf91389753f343e"
+    static let ApiKey = "bbd49fe67f2647569ee2186aff82a08a"
     
     static func urlForCategory() -> URL? {
         var urlComponents = NewsApi.baseUrlComponents
@@ -68,14 +68,14 @@ extension URL {
         let task = session.dataTask(with: self) { data, _, error in
             if let _ = error {
                 DispatchQueue.main.async {
-                    completion(.error(error: .generic))
+                    completion(.failure(.generic))
                 }
                 return
             }
             
             guard let unwrappedData = data else {
                 DispatchQueue.main.async {
-                    completion(.error(error: .generic))
+                    completion(.failure(.generic))
                 }
                 return
             }
@@ -84,12 +84,12 @@ extension URL {
             decoder.dateDecodingStrategy = .iso8601
             if let decoded = try? decoder.decode(T.self, from: unwrappedData) {
                 DispatchQueue.main.async {
-                    completion(.success(value: decoded))
+                    completion(.success(decoded))
                 }
             }
             else {
                 DispatchQueue.main.async {
-                    completion(.error(error: .generic))
+                    completion(.failure(.generic))
                 }
             }
         }
@@ -99,11 +99,11 @@ extension URL {
     
 }
 
-//public enum ApiError: Error {
-//    case generic
-//    case forbidden              //Status code 403
-//    case notFound               //Status code 404
-//    case conflict               //Status code 409
-//    case internalServerError    //Status code 500
-//    case unknownError           //Status code not known
-//}
+public enum ApiError: Error {
+    case generic
+    case forbidden              //Status code 403
+    case notFound               //Status code 404
+    case conflict               //Status code 409
+    case internalServerError    //Status code 500
+    case unknownError           //Status code not known
+}

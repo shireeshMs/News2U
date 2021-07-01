@@ -7,18 +7,58 @@
 
 import Foundation
 import UIKit
-class AllArticlesListCoordinator: ConcreteCoordinator {
+
+final class AllArticlesListCoordinator: NavCoordinator, PreviewingCoordinator ,TVShowInteractor{
+   
+    func shouldUpdateTableView() {
+        let viewController: ArticleListViewController = self.navigationController.topViewController as! ArticleListViewController
+        viewController.shouldUpdateTableView()
+        
+    }
     
-    override func start() {
-        let listingView = ArticleListViewController.instantiate()// 6
-        listingView.coordinator = self
-        listingView.title = "Article list"
-        listingView.tabBarItem = UITabBarItem(title: "Popular", image: UIImage(named: "ic_popular_disabled"), selectedImage: UIImage(named: "ic_popular"))
-        navigationController.pushViewController(listingView, animated: true)
-        navigationController.configureTheme()
+    
+    let navigationController: UINavigationController
+    var parentCoordinator: Coordinator?
+    var childCoordinators: [Coordinator]
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+        childCoordinators = []
+
+        navigationController.tabBarItem = UITabBarItem(title: "Home", image: nil, selectedImage: nil)
     }
-    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-        if childCoordinatorShouldNotBeDeleted(navigationController: navigationController) { return }
+    func showHome() {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+        let viewModel: ArticleListViewModel = ArticleListViewModel(tvShowInteractor: self, coordinator: self)
+        let viewController: ArticleListViewController = ArticleListViewController.initialize(with: viewModel, from: storyboard)
+        
+        viewController.title = "Article list"
+        viewController.tabBarItem = UITabBarItem(title: "Popular", image: UIImage(named: "ic_popular_disabled"), selectedImage: UIImage(named: "ic_popular"))
+        navigationController.pushViewController(viewController, animated: true)
+//        navigationController.configureTheme()
     }
+     func start() {
+        
+        showHome()
+    }
+    func generateDetailCouple() -> Couple<ArticleDetailViewModel, ArticleDetailController> {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+        let viewModel: ArticleDetailViewModel = ArticleDetailViewModel(coordinator: self)
+        let viewController: ArticleDetailController = ArticleDetailController.initialize(with: viewModel, from: storyboard)
+
+        return (viewModel: viewModel, controller: viewController)
+    }
+
+    func previewDetailPage() -> ArticleDetailController {
+        return generateDetailCouple().controller
+    }
+
+    func showDetailPage() {
+        let couple: Couple<ArticleDetailViewModel, ArticleDetailController> = generateDetailCouple()
+
+        navigationController.pushViewController(couple.controller, animated: true)
+    }
+
 }
 

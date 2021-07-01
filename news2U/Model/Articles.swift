@@ -27,6 +27,7 @@ struct Source: Codable {
 }
 
 extension Article {
+    @available(iOS 13.0, *)
     var ago: String? {
         guard let date = publishedAt else { return nil }
 

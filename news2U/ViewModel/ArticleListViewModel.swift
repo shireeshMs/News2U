@@ -7,9 +7,8 @@
 //
 
 import Foundation
-
-class ArticleListViewModel {
-    
+import UIKit
+class ArticleListViewModel : ViewModel {
     var tvShowContainer: Headline? {
         didSet {
             // Update UI
@@ -17,15 +16,27 @@ class ArticleListViewModel {
             tvShowInteractor.shouldUpdateTableView()
         }
     }
-    
+    private let coordinator: AllArticlesListCoordinator
+
+   
+    func showDetail() {
+//        coordinator.showDetailPage()
+    }
+
+    func previewDetail() -> UIViewController? {
+        return coordinator.generateDetailCouple().controller
+    }
+
+    func commitPreviewContext(viewController: UIViewController) {
+        coordinator.commitViewController(viewController)
+    }
     var tvShowCellViewModels: [ArticleCellViewModel] = []
     
-    private let tvShowRepository: NewsRepository
     private let tvShowInteractor: TVShowInteractor
     
-    init(tvShowRepository: NewsRepository = NewsRepository(requestConfigurator: RequestConfigurator( parameters: [Constants.Parameters.api_key : Constants.tmdbApiKey])), tvShowInteractor: TVShowInteractor) {
-        self.tvShowRepository = tvShowRepository
-        self.tvShowInteractor = tvShowInteractor
+    init( tvShowInteractor: TVShowInteractor, coordinator: AllArticlesListCoordinator) {
+        self.tvShowInteractor = tvShowInteractor as! TVShowInteractor
+        self.coordinator = coordinator
         fetchTVShows()
     }
     
@@ -33,6 +44,7 @@ class ArticleListViewModel {
         NewsApi.getArticles(url: NewsApi.urlForCategory()) { [weak self] result in
             self?.tvShowContainer = result
             print(self?.tvShowContainer?.articles)
+            self?.coordinator.shouldUpdateTableView()
         }
 
     }

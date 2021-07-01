@@ -8,42 +8,42 @@
 import Foundation
 import UIKit
 
-public class ConcreteCoordinator: NSObject, Coordinator, UINavigationControllerDelegate  {
-    
-    // MARK: - Variables
-    public var navigationController: UINavigationController
-    
-    public var childCoordinators = [Coordinator]()
-    
-    public init(navigationController: UINavigationController) {
+ class ConcreteCoordinator: NSObject, NavCoordinator  {
+    var navigationController: UINavigationController
+    var parentCoordinator: Coordinator?
+    var childCoordinators: [Coordinator]
+
+    init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        childCoordinators = []
+
+        navigationController.setNavigationBarHidden(true, animated: false)
     }
-    
-    // MARK: - Functions
-    
-    /// This method will only be called internally
-    public func childDidFinish(_ child: Coordinator?) {
-        for (index, coordinator) in childCoordinators.enumerated() {
-            if coordinator === child {
-                childCoordinators.remove(at: index)
-                break
-            }
-        }
+
+    func start() {
+        showWelcomePage()
     }
-    
-    public func childCoordinatorShouldNotBeDeleted(navigationController: UINavigationController) -> Bool {
-        guard let fromViewController = navigationController.getFromViewController() else {
-            return true
-        }
-        if navigationController.viewControllers.contains(fromViewController) {
-            return true
-        }
-        return false
+
+    func showWelcomePage() {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+        let viewModel: WelcomePageViewModel = WelcomePageViewModel(coordinator: self)
+        let viewController: WelcomePageController = WelcomePageController.initialize(with: viewModel, from: storyboard)
+//        self.navigationController.pushViewController(viewController, animated: true)
+        self.navigationController.pushViewController(viewController, animated: false)
     }
-    
-    open func start() {
-        fatalError("start() should be overriden")
+
+    func showTabBarCoordinator(animated: Bool) {
+        
+        let coordinator: TabBarCoordinator = TabBarCoordinator(tabBarController: UITabBarController())
+        addChildCoordinator(coordinator: coordinator)
+
+        coordinator.start()
+
+        navigationController.present(coordinator.tabBarController, animated: animated, completion: {
+            self.stop()
+        })
     }
-    
 }
+
 

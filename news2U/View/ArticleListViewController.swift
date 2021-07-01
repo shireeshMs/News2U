@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ArticleListViewController: UIViewController, Storyboarded {
+final class ArticleListViewController: UIViewController,ViewModelController {
     
+    typealias ViewModelType = ArticleListViewModel
+   
+    var viewModel: ViewModelType!
     
     // MARK: - UI Elements
     
@@ -17,8 +20,6 @@ class ArticleListViewController: UIViewController, Storyboarded {
     
     // MARK: - Public  Variables
    
-    weak var coordinator: AllArticlesListCoordinator?
-    var tvShowViewModel: ArticleListViewModel?
     
     // MARK: - Methods
     func initTableView() {
@@ -35,10 +36,18 @@ class ArticleListViewController: UIViewController, Storyboarded {
 // MARK: - Lifecycle
 extension ArticleListViewController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        viewModel.fetchTVShows()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        tvShowViewModel = ArticleListViewModel(tvShowInteractor: self)
+//        tvShowViewModel = ArticleListViewModel(tvShowInteractor: self)
+//        tvShowViewModel = ArticleListViewModel(tvShowInteractor: self, coordinator: self.coordinator!)
+        print("Result \(self.viewModel.tvShowCellViewModels.count)")
+        print("Result\(self.viewModel.tvShowContainer?.articles)")
+//        self.viewModel = ArticleListViewModel(tvShowInteractor: <#T##TVShowInteractor#>, coordinator: <#T##AllArticlesListCoordinator#>)
         initTableView()
     }
     
