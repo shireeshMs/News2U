@@ -12,6 +12,7 @@ It's the application based on MVVM - Coordinator pattern ,shows the list from ne
 MacOS 11.3.1 with Xcode 12.5 :
 
 ```
+ git clone https://github.com/shireeshMs/News2U.git
  cd news2U
  pod install
 ```
