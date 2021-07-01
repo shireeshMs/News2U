@@ -11,9 +11,10 @@ import UIKit
 final class AllArticlesListCoordinator: NavCoordinator ,TVShowInteractor{
    
     func shouldUpdateTableView() {
-        let viewController: ArticleListViewController = self.navigationController.topViewController as! ArticleListViewController
-        viewController.shouldUpdateTableView()
         
+        if  let viewController = self.navigationController.topViewController  as? ArticleListViewController ,viewController.isKind(of: ArticleListViewController.self){
+            viewController.shouldUpdateTableView()
+        }        
     }
     
     
