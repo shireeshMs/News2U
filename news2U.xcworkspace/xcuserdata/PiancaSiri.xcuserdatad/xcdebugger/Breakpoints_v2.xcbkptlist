@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0C257D86-EBB5-48CD-83F7-EBFBBA36D227"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5E86A9D-0B80-427E-B0C1-D984A35667C8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "news2U/Networking/TVShowEndPoint.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "provideUrl()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B75D66E-A697-4EC7-B57A-103BE0459BF4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "news2U/Repository/NewsRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "getRemoteDataSource(responseCallback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "548EC5DD-86C5-4B09-879C-C4A1EEDE1801"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "news2U/Networking/ApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "request(_:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "39A18F29-57EF-4D2B-B373-6B38F9DFEED9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "news2U/Networking/ApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "request(_:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD582FC9-5F8B-4429-8341-F6B950CE50FC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "news2U/Resources/Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "nameSpace"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "AD582FC9-5F8B-4429-8341-F6B950CE50FC - a343cc2c3485fc1b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static __C.NSBundle.nameSpace.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "news2U"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piancasiri/Desktop/news2U/news2U/Resources/Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "1220">
+               </Location>
+               <Location
+                  uuid = "AD582FC9-5F8B-4429-8341-F6B950CE50FC - ef7e9e73eaa8a2b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static __C.NSBundle.nameSpace.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "news2UTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piancasiri/Desktop/news2U/news2U/Resources/Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "1220">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4C43431-4CEE-4779-9CFE-BCBC59D9C8CB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "news2U/Coordinators/ConcreteCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "showWelcomePage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F4C43431-4CEE-4779-9CFE-BCBC59D9C8CB - 9559eeda52fe5eb8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "news2U.ConcreteCoordinator.showWelcomePage() -&gt; ()"
+                  moduleName = "news2U"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piancasiri/Desktop/news2U/news2U/Coordinators/ConcreteCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "53">
+               </Location>
+               <Location
+                  uuid = "F4C43431-4CEE-4779-9CFE-BCBC59D9C8CB - c76ec1378cd78008"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "news2UTests.ConcreteCoordinator.showWelcomePage() -&gt; ()"
+                  moduleName = "news2UTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piancasiri/Desktop/news2U/news2U/Coordinators/ConcreteCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "53">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A5C1BAD-F8C9-4910-A362-4A4748F1F47B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "news2U/Utility/MVVM/ViewModelController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "initialize(with:from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6DED712E-5386-4B10-82AA-90AF6D546F56"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "news2U/Welcome/WelcomePageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "init(coordinator:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD612EC3-683F-40DA-A058-5633FA40DF69"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "news2U/Application/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4EF916DE-5955-4DD3-89A4-14BB7129C4B9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "news2U/ViewModel/ArticleListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "previewDetail(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4EF916DE-5955-4DD3-89A4-14BB7129C4B9 - 54441a129cf198d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "news2U.ArticleListViewModel.previewDetail(for: news2U.ArticleCellViewModel) -&gt; Swift.Optional&lt;__C.UIViewController&gt;"
+                  moduleName = "news2U"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piancasiri/Desktop/news2U/news2U/ViewModel/ArticleListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "4EF916DE-5955-4DD3-89A4-14BB7129C4B9 - 5036cd0af6bf8eaa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "news2UTests.ArticleListViewModel.previewDetail(for: news2UTests.ArticleCellViewModel) -&gt; Swift.Optional&lt;__C.UIViewController&gt;"
+                  moduleName = "news2UTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piancasiri/Desktop/news2U/news2U/ViewModel/ArticleListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0EFF4025-553A-49AC-9137-D32F7A023301"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "news2U/Coordinators/AllArticlesListCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "generateDetailCouple(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0EFF4025-553A-49AC-9137-D32F7A023301 - ce60d02ce0456d61"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "news2U.AllArticlesListCoordinator.generateDetailCouple(news2U.ArticleCellViewModel) -&gt; (viewModel: news2U.ArticleDetailViewModel, controller: news2U.ArticleDetailController)"
+                  moduleName = "news2U"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piancasiri/Desktop/news2U/news2U/Coordinators/AllArticlesListCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  uuid = "0EFF4025-553A-49AC-9137-D32F7A023301 - 503ec6ddf3a9e2df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "news2UTests.AllArticlesListCoordinator.generateDetailCouple(news2UTests.ArticleCellViewModel) -&gt; (viewModel: news2UTests.ArticleDetailViewModel, controller: news2UTests.ArticleDetailController)"
+                  moduleName = "news2UTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piancasiri/Desktop/news2U/news2U/Coordinators/AllArticlesListCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "69">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "768E5386-DE04-47B9-B6DC-A6184904946C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "news2U/Coordinators/AllArticlesListCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "showDetailPage(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "768E5386-DE04-47B9-B6DC-A6184904946C - 81fdecbafdea2bb2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "news2U.AllArticlesListCoordinator.showDetailPage(for: news2U.ArticleCellViewModel) -&gt; ()"
+                  moduleName = "news2U"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piancasiri/Desktop/news2U/news2U/Coordinators/AllArticlesListCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "43">
+               </Location>
+               <Location
+                  uuid = "768E5386-DE04-47B9-B6DC-A6184904946C - c578503e63fb373f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "news2UTests.AllArticlesListCoordinator.showDetailPage(for: news2UTests.ArticleCellViewModel) -&gt; ()"
+                  moduleName = "news2UTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piancasiri/Desktop/news2U/news2U/Coordinators/AllArticlesListCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "43">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C83E108-F858-4A57-A446-10D1293332D8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "news2U/View/Detail/ArticleDetailController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6C83E108-F858-4A57-A446-10D1293332D8 - 4bd3cf407eb94539"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "news2U.ArticleDetailController.viewDidLoad() -&gt; ()"
+                  moduleName = "news2U"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piancasiri/Desktop/news2U/news2U/View/Detail/ArticleDetailController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "5334">
+               </Location>
+               <Location
+                  uuid = "6C83E108-F858-4A57-A446-10D1293332D8 - 2a9d05e093689b89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "news2UTests.ArticleDetailController.viewDidLoad() -&gt; ()"
+                  moduleName = "news2UTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/piancasiri/Desktop/news2U/news2U/View/Detail/ArticleDetailController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "5334">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1B4FDF1E-5DEA-4573-B7AC-E45BE4ED19D6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "news2UTests/Utility/Protocols/CoordinatorTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "setUp()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
