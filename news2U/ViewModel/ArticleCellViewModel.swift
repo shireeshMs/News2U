@@ -35,7 +35,7 @@ class ArticleCellViewModel {
     
     var voteDescription: String! {
         get {
-            return "\(article.publishedAt?.description) total votes)"
+            return article.content
         }
     }
     

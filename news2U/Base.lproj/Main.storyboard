@@ -32,7 +32,7 @@
                             <constraint firstItem="mzB-Ry-3Qq" firstAttribute="trailing" secondItem="SHH-bG-OSa" secondAttribute="trailing" id="sSu-7X-N1l"/>
                         </constraints>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="mzB-Ry-3Qq" id="qUw-dE-oUW"/>
                     </connections>
@@ -113,10 +113,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6YJ-Qm-e0L">
-                                <rect key="frame" x="20" y="114" width="374" height="668"/>
+                                <rect key="frame" x="20" y="158" width="374" height="528.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ls3-VO-7cj">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ls3-VO-7cj">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="278"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="7LZ-a6-ld4"/>
+                                            <constraint firstAttribute="height" constant="278" id="rTP-gC-5jP"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BN3-gM-dvu">
                                         <rect key="frame" x="0.0" y="286" width="374" height="21"/>
@@ -134,7 +138,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="This is overview" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7e-GL-DHJ">
-                                        <rect key="frame" x="0.0" y="481" width="374" height="158"/>
+                                        <rect key="frame" x="0.0" y="481" width="374" height="18.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="158" id="Wev-Fd-qLW"/>
                                         </constraints>
@@ -143,7 +147,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="P2a-No-Mtk">
-                                        <rect key="frame" x="0.0" y="647" width="374" height="21"/>
+                                        <rect key="frame" x="0.0" y="507.5" width="374" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="2l9-ne-3qV"/>
                                         </constraints>
@@ -152,10 +156,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="ls3-VO-7cj" firstAttribute="top" secondItem="6YJ-Qm-e0L" secondAttribute="topMargin" id="BCO-F1-uBZ"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jO7-8N-1bw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="6YJ-Qm-e0L" firstAttribute="centerY" secondItem="a94-Kg-7C1" secondAttribute="centerY" id="0pS-tv-9fR"/>
                             <constraint firstItem="6YJ-Qm-e0L" firstAttribute="trailing" secondItem="a94-Kg-7C1" secondAttribute="trailingMargin" id="1Am-NS-l10"/>
@@ -163,6 +170,7 @@
                             <constraint firstItem="6YJ-Qm-e0L" firstAttribute="top" secondItem="jO7-8N-1bw" secondAttribute="top" constant="70" id="LlY-es-fun"/>
                         </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <connections>
                         <outlet property="articleContent" destination="Q7e-GL-DHJ" id="bRW-uR-3Wr"/>
                         <outlet property="articleDesc" destination="0hr-q1-1NC" id="Lac-xa-QEO"/>
@@ -177,8 +185,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

@@ -10,13 +10,15 @@ import Foundation
 struct NewsApi {
     
     static let ApiKey = "bbd49fe67f2647569ee2186aff82a08a"
-    
+    static let Page = 1
+
     static func urlForCategory() -> URL? {
         var urlComponents = NewsApi.baseUrlComponents
         
         urlComponents.path = Path.top.rawValue
         
         let keyQueryItem = NewsApi.keyQueryItem
+//        let pageQueryItem = NewsApi.keyQueryItem
         let countryQueryItem = URLQueryItem(name: "country", value: "us")
         
         urlComponents.queryItems = [ keyQueryItem, countryQueryItem ]
@@ -24,16 +26,17 @@ struct NewsApi {
         return urlComponents.url
     }
     
-    static func urlForQuery(_ query: String) -> URL? {
+    static func urlForQuery(_ page: String) -> URL? {
         var urlComponents = NewsApi.baseUrlComponents
         
         urlComponents.path = Path.search.rawValue
         
         let keyQueryItem = NewsApi.keyQueryItem
-        let languageQueryItem = URLQueryItem(name: "language", value: "en")
-        let queryQueryItem = URLQueryItem(name: "q", value: query)
+        let pageQueryItem = URLQueryItem(name: "page", value: page)
+//        let languageQueryItem = URLQueryItem(name: "language", value: "en")
+        let queryQueryItem = URLQueryItem(name: "q", value: "bitcoin")
         
-        urlComponents.queryItems = [ keyQueryItem, languageQueryItem, queryQueryItem ]
+        urlComponents.queryItems = [ keyQueryItem ,queryQueryItem ,pageQueryItem]
         
         return urlComponents.url
     }
@@ -56,6 +59,9 @@ private extension NewsApi {
     
     static var keyQueryItem: URLQueryItem {
         return URLQueryItem(name: "apiKey", value: ApiKey)
+    }
+    static var pageQueryItem: URLQueryItem {
+        return URLQueryItem(name: "page", value: String(Page))
     }
 }
 

@@ -6,8 +6,7 @@ target 'news2U' do
   use_frameworks!
 
   # Pods for news2U
-#  def alamofire
-    pod 'Alamofire'
+#  def Kingfisher
     pod 'Kingfisher'
 #  end
   target 'news2UTests' do

@@ -12,12 +12,15 @@ extension ArticleListViewController: UITableViewDataSourcePrefetching {
     
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         guard let tvShowViewModels: [ArticleCellViewModel] = viewModel?.tvShowCellViewModels else { return }
+        var number = 1
         let shouldFetchRemoteData: Bool = indexPaths.contains { (indexPath) -> Bool in
             // If there is 5 more rows to go, than start fetching data from remote
-            indexPath.row == tvShowViewModels.count - 5
+            number = indexPath.row
+            return indexPath.row == tvShowViewModels.count - 5
         }
-        if shouldFetchRemoteData {
-            viewModel?.fetchTVShows(shouldApplyPagination: true)
+        if shouldFetchRemoteData && number < 16 {
+            // just to have lot of data without pagination as news api doesnt have page
+            viewModel?.fetchTVShows(shouldApplyPagination: true, page: number)
         }
     }
     

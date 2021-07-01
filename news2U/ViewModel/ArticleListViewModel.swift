@@ -18,7 +18,6 @@ class ArticleListViewModel : ViewModel {
     }
     private let coordinator: AllArticlesListCoordinator
 
-   
     func showDetail(for article : ArticleCellViewModel) {
         coordinator.showDetailPage(for: article)
 //        coordinator.showDetailPage()
@@ -39,8 +38,8 @@ class ArticleListViewModel : ViewModel {
         fetchTVShows()
     }
     
-    func fetchTVShows(shouldApplyPagination: Bool = false) {
-        NewsApi.getArticles(url: NewsApi.urlForCategory()) { [weak self] result in
+    func fetchTVShows(shouldApplyPagination: Bool = false,page:Int = 1) {
+        NewsApi.getArticles(url: NewsApi.urlForQuery(String(page))) { [weak self] result in
             self?.tvShowContainer = result
             print(self?.tvShowContainer?.articles)
             self?.coordinator.shouldUpdateTableView()
