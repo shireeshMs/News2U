@@ -32,9 +32,9 @@ open the news2U.xcworkspace file and run the app .
 
 ## Meta
 
-Shireesh Mahesh Shukla – [@YourTwitter](https://twitter.com/dbader_org) – Shireesh.mahesh@gmail.com
+Shireesh Mahesh Shukla – [@Linkedin](https://www.linkedin.com/in/shireesh-mahesh-shukla-2b148226) – Shireesh.mahesh@gmail.com
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+<!-- Distributed under the XYZ license. See ``LICENSE`` for more information. -->
 
 [https://github.com/shireeshMs/News2U/](https://github.com/shireeshMs/)
 
